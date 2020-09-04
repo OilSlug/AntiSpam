@@ -1,0 +1,38 @@
+#--------------------------------------
+# AntiSpam made by OilSlug
+#--------------------------------------
+
+#This is the alert message that staff receive when a player is spamming.
+
+#%player% is the player's name.
+#%check% is the type of spam.
+#%verbose% is how many times they spammed.
+alertMessage: '&8[&c&lAntiSpam&8] &c%player% &7was detected for spamming! &8(&7Type&8: &c%check% &7VL: %verbose%&8)'
+
+#This is the max times staff will be alerted before punishing the player.
+maxVerbose: 5
+
+punishments:
+  #This is if the player should be punished for spamming too much.
+  enabled: true
+
+  #This is the punishment command.
+  command: 'kick %player% [AntiSpam] Spamming'
+
+checks:
+  #Checking if a player is sending a message too fast compared to how long the message is.
+  time:
+    #This is if you want to check for this type of spam.
+    enabled: true
+    #This is the cool downtime after a message (this is in milliseconds and will be times by how many words there is in the message)
+    cooldown: 10
+  #Checking if a player is sending the same or a similar message constantly.
+  constant:
+    #This is if you want to check for this type of spam.
+    enabled: true
+  #Checking if a player is spamming commands.
+  command:
+    #This is if you want to check for this type of spam.
+    enabled: true
+    #This is the cool downtime after a command (this is in milliseconds and will be times by how many words there is in the command)
+    cooldown: 20

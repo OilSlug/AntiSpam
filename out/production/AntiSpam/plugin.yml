@@ -1,0 +1,10 @@
+name: AntiSpam
+author: OilSlug
+main: cc.oilslug.antispam.AntiSpam
+version: 1.0.0
+
+permissions:
+  antispam.alerts:
+    default: op
+  antispam.bypass:
+    default: op
